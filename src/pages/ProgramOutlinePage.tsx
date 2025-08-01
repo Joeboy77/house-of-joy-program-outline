@@ -209,6 +209,29 @@ export default function ProgramOutlinePage() {
           }
         }
 
+        @keyframes scrollBounce {
+          0%, 20%, 50%, 80%, 100% {
+            transform: translateY(0);
+          }
+          40% {
+            transform: translateY(-10px);
+          }
+          60% {
+            transform: translateY(-5px);
+          }
+        }
+
+        @keyframes scrollPulse {
+          0%, 100% {
+            opacity: 1;
+            transform: scale(1);
+          }
+          50% {
+            opacity: 0.7;
+            transform: scale(1.1);
+          }
+        }
+
         .fade-in {
           animation: fadeIn 0.8s ease-out forwards;
         }
@@ -553,6 +576,68 @@ export default function ProgramOutlinePage() {
           height: 4px;
           background: linear-gradient(90deg, #ffd700, #fff, #ffd700);
           border-radius: 2px;
+        }
+
+        /* Scroll Indicator */
+        .scroll-indicator {
+          text-align: center;
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+          animation: scrollBounce 2s ease-in-out infinite;
+          position: relative;
+          z-index: 10;
+        }
+
+        @media (max-width: 768px) {
+          .scroll-indicator {
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+          }
+          
+          .scroll-text {
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+          }
+          
+          .scroll-line {
+            height: 30px;
+          }
+        }
+
+        .scroll-text {
+          color: #ffd700;
+          font-size: 1rem;
+          font-weight: 600;
+          margin-bottom: 1rem;
+          text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+          letter-spacing: 1px;
+        }
+
+        .scroll-arrow {
+          position: relative;
+          display: inline-block;
+        }
+
+        .scroll-line {
+          width: 2px;
+          height: 40px;
+          background: linear-gradient(to bottom, #ffd700, transparent);
+          margin: 0 auto;
+          border-radius: 1px;
+          position: relative;
+        }
+
+        .scroll-dot {
+          width: 8px;
+          height: 8px;
+          background: #ffd700;
+          border-radius: 50%;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          animation: scrollPulse 1.5s ease-in-out infinite;
+          box-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
         }
 
         .floating-icons {
@@ -936,6 +1021,15 @@ export default function ProgramOutlinePage() {
             <h3><Clock size={20} style={{ display: 'inline', marginRight: '8px' }} />Time</h3>
             <p>3:00 PM - 8:00 PM</p>
           </div>
+        </div>
+      </div>
+
+      {/* Scroll Indicator - Now positioned right after header */}
+      <div className="scroll-indicator">
+        <p className="scroll-text">Scroll down for full program</p>
+        <div className="scroll-arrow">
+          <div className="scroll-line"></div>
+          <div className="scroll-dot"></div>
         </div>
       </div>
 
