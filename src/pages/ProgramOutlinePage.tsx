@@ -14,7 +14,7 @@ const programData = [
   { time: "4:15pm-4:25pm", activity: "Introduction of dignitaries", icon: Award },
   { time: "4:25pm-4:35pm", activity: "2nd Performance(Manifest)", icon: Music },
   { time: "4:35pm-4:45pm", activity: "3rd Performance(Valley View)", icon: Music },
-  { time: "4:45pm-4:55pm", activity: "Purpose of gathering (Ps.Nimako)", icon: Heart },
+  { time: "4:45pm-4:55pm", activity: "Purpose of gathering (Ps. Phestus)", icon: Heart },
   { time: "5:00pm-5:30pm", activity: "Host Choir(1st Performance)", icon: Music },
   { time: "5:30pm-6:00pm", activity: "Fundraising/ Valley view", icon: Star },
   { time: "6:00pm-6:10pm", activity: "Host choir", icon: Music },
@@ -175,13 +175,13 @@ export default function ProgramOutlinePage() {
 
         @keyframes glow {
           0%, 100% { 
-            box-shadow: 0 0 30px rgba(255, 215, 0, 0.6),
-                        inset 0 0 20px rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.3),
+                        inset 0 0 10px rgba(255, 255, 255, 0.1);
           }
           50% { 
-            box-shadow: 0 0 50px rgba(255, 215, 0, 0.8), 
-                        0 0 80px rgba(255, 215, 0, 0.4),
-                        inset 0 0 20px rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.5), 
+                        0 0 40px rgba(255, 215, 0, 0.2),
+                        inset 0 0 10px rgba(255, 255, 255, 0.1);
           }
         }
 
@@ -343,17 +343,17 @@ export default function ProgramOutlinePage() {
           width: 140px;
           height: 140px;
           border-radius: 50%;
-          background: radial-gradient(circle, #ffffff 0%, #f8f9fa 30%, #401516 100%);
+          background: radial-gradient(circle, #2d1b1b 0%, #1a0f0f 30%, #0a0505 100%);
           display: flex;
           align-items: center;
           justify-content: center;
-          border: 5px solid rgba(255, 215, 0, 0.8);
+          border: 3px solid rgba(255, 215, 0, 0.6);
           animation: glow 3s ease-in-out infinite;
           position: relative;
           overflow: hidden;
           box-shadow: 
-            0 0 30px rgba(255, 215, 0, 0.6),
-            inset 0 0 20px rgba(255, 255, 255, 0.2);
+            0 0 15px rgba(255, 215, 0, 0.3),
+            inset 0 0 10px rgba(255, 255, 255, 0.05);
         }
 
         .logo-container::before {
@@ -370,12 +370,13 @@ export default function ProgramOutlinePage() {
         }
 
         .logo-image {
-          width: 90%;
-          height: 90%;
+          width: 95%;
+          height: 95%;
           object-fit: cover;
           border-radius: 50%;
-          filter: contrast(1.2) brightness(1.1);
+          filter: contrast(1.4) brightness(1.3) saturate(1.2);
           z-index: 2;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
 
         .title-container {
