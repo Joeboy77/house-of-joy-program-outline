@@ -4,7 +4,7 @@ import logo1 from '../assets/img/logo1.png';
 import image1 from '../assets/img/image.png'; 
 import image2 from '../assets/img/image1.png';
 import outlinePdf from '../assets/pdf/HOJ.pdf'; 
-import outlineImage from '../assets/img/outline.png'; 
+import outlineImage from '../assets/img/outline.jpg'; 
 
 const programData = [
   { time: "3:00pm-4:00pm", activity: "Red Carpet/Arrival", icon: Star },
