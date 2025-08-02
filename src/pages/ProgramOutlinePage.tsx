@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Music, Calendar, Clock, Star, Sparkles, Heart, Users, Award, FileText, Image } from 'lucide-react';
+import { Music, Calendar, Clock, Star, Sparkles, Heart, Users, Award, FileText, Image, Instagram, Youtube, Music2 } from 'lucide-react';
 import logo1 from '../assets/img/logo1.png';
 import image1 from '../assets/img/image.png'; 
 import image2 from '../assets/img/image1.png';
@@ -883,6 +883,22 @@ export default function ProgramOutlinePage() {
           transform: scale(1.1);
         }
 
+        .social-icon-link {
+          text-decoration: none;
+          transition: all 0.3s ease;
+        }
+
+        .social-icon-link:hover {
+          transform: translateY(-3px);
+        }
+
+        .social-icon-link:hover .social-icon {
+          background: #ffd700;
+          color: #333;
+          transform: scale(1.1);
+          box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
+        }
+
         /* Responsive Design */
         @media (max-width: 1024px) {
           .main-logo-container {
@@ -1143,10 +1159,39 @@ export default function ProgramOutlinePage() {
       {/* Footer Section */}
       <div className="footer-section">
         <div className="social-icons">
-          <div className="social-icon">🎵</div>
-          <div className="social-icon">📺</div>
-          <div className="social-icon">📷</div>
-          <div className="social-icon">📱</div>
+          <a 
+            href="https://www.tiktok.com/@gnaasugchoir?_t=ZM-8yUi7ShvgTm&_r=1" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="social-icon-link"
+            title="Follow us on TikTok"
+          >
+            <div className="social-icon">
+              <Music2 size={24} />
+            </div>
+          </a>
+          <a 
+            href="https://youtube.com/@gnaas-ugchoir?si=VjWqKEOj9RNeqS6o" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="social-icon-link"
+            title="Subscribe to our YouTube"
+          >
+            <div className="social-icon">
+              <Youtube size={24} />
+            </div>
+          </a>
+          <a 
+            href="https://www.instagram.com/gnaas_ugchoir?igsh=MW5qNGw2dGxoZHNoMA%3D%3D&utm_source=qr" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="social-icon-link"
+            title="Follow us on Instagram"
+          >
+            <div className="social-icon">
+              <Instagram size={24} />
+            </div>
+          </a>
         </div>
         <p>Follow us for updates and behind-the-scenes content!</p>
         <p style={{ marginTop: '1rem', fontSize: '0.9rem' }}>
